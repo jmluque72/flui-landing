@@ -24,7 +24,6 @@ class Footer extends React.Component {
         };
     }
     
-   
 
     render() {
         const height = window.innerHeight;
