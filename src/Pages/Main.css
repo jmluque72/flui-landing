@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'NeueHaasDisplayRoman';
+    src: local('NeueHaasDisplayRoman'), url('../assets/fonts/NeueHaasDisplayRoman.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NeueHaasDisplayMedium';
+    src: local('NeueHaasDisplayMedium'), url('../assets/fonts/NeueHaasDisplayMedium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NeueHaasDisplayBlack';
+    src: local('NeueHaasDisplayBlack'), url('../assets/fonts/NeueHaasDisplayBlack.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NeueHaasDisplayBold';
+    src: local('NeueHaasDisplayBold'), url('../assets/fonts/NeueHaasDisplayBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NeueHaasDisplayThin';
+    src: local('NeueHaasDisplayThin'), url('../assets/fonts/NeueHaasDisplayThin.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NeueHaasDisplayThinItalic';
+    src: local('NeueHaasDisplayThinItalic'), url('../assets/fonts/NeueHaasDisplayThinItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NeueHaasDisplayXXThinItalic';
+    src: local('NeueHaasDisplayXXThinItalic'), url('../assets/fonts/NeueHaasDisplayXXThinItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'PoppinsBold';
+    src: local('PoppinsBold'), url('../assets/fonts/PoppinsBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'PoppinsRegular';
+    src: local('PoppinsRegular'), url('../assets/fonts/PoppinsRegular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'PoppinsLight';
+    src: local('PoppinsLight'), url('../assets/fonts/PoppinsLight.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'PoppinsSemiBold';
+    src: local('PoppinsSemiBold'), url('../assets/fonts/PoppinsSemiBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'PoppinsMedium';
+    src: local('PoppinsMedium'), url('../assets/fonts/PoppinsMedium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'PoppinsLightItalic';
+    src: local('PoppinsLightItalic'), url('../assets/fonts/PoppinsLightItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'PoppinsMediumItalic';
+    src: local('PoppinsMediumItalic'), url('../assets/fonts/PoppinsMediumItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Myriad Pro';
+    src: local('Myriad Pro'), url('../assets/fonts/Myriad Pro.ttf') format('truetype');
+}
+
+.headerMenu{
+    font-family: 'NeueHaasDisplayRoman';
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.775);
+    cursor: pointer;
+    margin: 0;
+}
+.headerMenuSelect{
+    font-family: 'NeueHaasDisplayRoman';
+    font-size: 12px;
+    color: rgba(255, 255, 255);
+    cursor: pointer;
+    margin: 0;
+}
+.textCarousel1{
+    font-size: 144px;
+    margin: 0px;
+    font-family: 'NeueHaasDisplayBold';
+    line-height: 0.8;
+    color:white;
+}
+.textCarousel1Thin{
+    font-size: 30px;
+    margin: 0px;
+    font-family: 'NeueHaasDisplayXXThinItalic';
+    line-height: 1.5;
+    color:white;
+    letter-spacing: 1.5px;
+}
+
+button, input[type="submit"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+input, textarea{
+    outline-color: #c43e56;
+}
+a:hover{
+    color: inherit; /* blue colors for links too */
+    text-decoration: none; /* no underline */
+}
