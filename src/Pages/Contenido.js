@@ -4,30 +4,30 @@ import './Main.css'
 import background from '../assets/contenido/background.png'
 import x from '../assets/contenido/x.png'
 import Carousel from 'react-elastic-carousel'
-import sebastian from '../assets/humanos/SantiagoBrana.jpg'
-import ChichaOsorio from '../assets/humanos/ChichaOsorio.jpeg'
-import EmilianaFelizzia from '../assets/humanos/EmilianaFelizzia.jpg'
-import JuanjoCobbo from '../assets/humanos/JuanjoCobbo.jpg'
-import FernandoSosaLoyola from '../assets/humanos/FernandoSosaLoyola.jpg'
-import ConsueloVélez from '../assets/humanos/ConsueloVelez.jpg'
-import MeyValdés from '../assets/humanos/MeyValdes.jpg'
-import KevinGorfinkel from '../assets/humanos/KevinGorfinkel.jpg'
-import LisandroIacovelli from '../assets/humanos/LisandroIacovelli.jpg'
-import ValentinaAcosta from '../assets/humanos/ValentinaAcosta.jpg'
-import SebastiánTapia from '../assets/humanos/SebastianTapia.jpg'
-import JuanCruzPraddaude from '../assets/humanos/JuanCruzPraddaude.jpg'
-import GemmaPerona from '../assets/humanos/GemmaPerona.jpeg'
-import AgustínMartinezPlinio from '../assets/humanos/AgustinMartinezPlinio.jpg'
-import JuanManuelZeballos from '../assets/humanos/JuanManuelZeballos.jpg'
-import JuanFerreyra from '../assets/humanos/JuanFerreyra.jpeg'
-import DiegoYorbandi from '../assets/humanos/DiegoYorbandi.jpg'
-import MartinHuergo from '../assets/humanos/MartinHuergo.jpeg'
-import EmanuelPérez from '../assets/humanos/EmanuelPerez.jpg'
-import IrisMacaluso from '../assets/humanos/IrisMacaluso.jpeg'
-import GastonMassa from '../assets/humanos/GastonMassa.jpg'
-import WillyMagia from '../assets/humanos/WillyMagia.jpg'
-import AgustinaLópez from '../assets/humanos/AgustinaLopez.jpg'
-import GonzaloKairuz from '../assets/humanos/GonzaloKairuz.jpg'
+import sebastian from '../assets/humanos/santiagobrana.jpg'
+import ChichaOsorio from '../assets/humanos/chichaosorio.jpeg'
+import EmilianaFelizzia from '../assets/humanos/emilianafelizzia.jpg'
+import JuanjoCobbo from '../assets/humanos/juanjocobbo.jpg'
+import FernandoSosaLoyola from '../assets/humanos/fernandososaloyola.jpg'
+import ConsueloVélez from '../assets/humanos/consuelovelez.jpg'
+import MeyValdés from '../assets/humanos/meyvaldes.jpg'
+import KevinGorfinkel from '../assets/humanos/kevingorfinkel.jpg'
+import LisandroIacovelli from '../assets/humanos/lisandroiacovelli.jpg'
+import ValentinaAcosta from '../assets/humanos/valentinaacosta.jpg'
+import SebastiánTapia from '../assets/humanos/sebastiantapia.jpg'
+import JuanCruzPraddaude from '../assets/humanos/juancruzpraddaude.jpg'
+import GemmaPerona from '../assets/humanos/gemmaperona.jpeg'
+import AgustínMartinezPlinio from '../assets/humanos/agustinmartinezplinio.jpg'
+import JuanManuelZeballos from '../assets/humanos/juanmanuelzeballos.jpg'
+import JuanFerreyra from '../assets/humanos/juanferreyra.jpeg'
+import DiegoYorbandi from '../assets/humanos/diegoyorbandi.jpg'
+import MartinHuergo from '../assets/humanos/martinhuergo.jpeg'
+import EmanuelPérez from '../assets/humanos/emanuelperez.jpg'
+import IrisMacaluso from '../assets/humanos/irismacaluso.jpeg'
+import GastonMassa from '../assets/humanos/gastonmassa.jpg'
+import WillyMagia from '../assets/humanos/willymagia.jpg'
+import AgustinaLópez from '../assets/humanos/agustinalopez.jpg'
+import GonzaloKairuz from '../assets/humanos/gonzalokairuz.jpg'
 import arrow from '../assets/contenido/arrow.png'
 import circle from '../assets/contenido/circle.png'
 
@@ -40,7 +40,7 @@ class Contenido extends React.Component {
                 {name: 'Willy Magia', arroba: '@willymagia', img: WillyMagia },
                 {name: 'Gaston Massa', arroba: '@gastonmassa', img: GastonMassa },
                 {name: 'Emiliana Felizzia', arroba: '@milifelizzia', img:  EmilianaFelizzia },
-                {name: 'Juanjo Cobbo', arroba: '@shotbyjuanjo', img: JuanjoCobbo },
+                {name: 'Juanjo Cobo', arroba: '@shotbyjuanjo', img: JuanjoCobbo },
                 {name: 'Agustina López', arroba: '@pasaje.en.mano', img: AgustinaLópez },
                 {name: 'Chicha Osorio', arroba: '@osoriochicha', img: ChichaOsorio },
                 {name: 'Martin Huergo', arroba: '@huergomartin', img: MartinHuergo },
@@ -59,14 +59,14 @@ class Contenido extends React.Component {
                 {name: 'Fernando Sosa Loyola', arroba: '@fersosaloyola', img: FernandoSosaLoyola },
                 {name: 'Lisandro Iacovelli', arroba: '@licharecomienda', img: LisandroIacovelli },
                 {name: 'Emanuel Pérez', arroba: '@emanuelle.pe', img: EmanuelPérez },
-                {name: 'Iris Macaluso', arroba: '', img: IrisMacaluso },
+                {name: 'Iris Macaluso', arroba: '@maciris', img: IrisMacaluso },
                 {name: 'Juan Ferreyra', arroba: '@el.juan.ferreyra', img: JuanFerreyra },
 
             ],
             materias: [ 
                 {num: '01', title: 'El ecosistema del marketing de influencia'},
-                {num: '02', title: 'Herramientas digitales'},
-                {num: '03', title: 'Introducción a la composición visual'},
+                {num: '02', title: 'Introducción a la composición visual'},
+                {num: '03', title: 'Herramientas digitales'},
                 {num: '04', title: '¿Cómo comunicar efectivamente?'},
                 {num: '05', title: 'La marca personal'},
                 {num: '06', title: 'El diseño de tu negocio'},
@@ -77,19 +77,20 @@ class Contenido extends React.Component {
     render() {
         const seis = [{},{},{},{},{},{},{},{}]
         const height = window.innerHeight;
+        const width = window.innerWidth < 700
         return (
-            <div style={{ width:'100%',height:height*2,marginTop:-1, display:'flex',flexDirection:'column',backgroundImage:`url(${background})`,backgroundSize:'cover',backgroundRepeat:'no-repeat'}}>
+            <div style={{ width:'100%',height:!width ? height*2 : height*2 + 350 ,marginTop:-1, display:'flex',flexDirection:'column',backgroundImage:`url(${background})`,backgroundPositionX:'center',backgroundSize:'cover',backgroundRepeat:'no-repeat'}}>
                <Grid container direction='row' style={{ paddingTop:100}}>
-                    <Grid item xs={6} style={{width:'100%',height:300,display:'flex',alignItems:'flex-end',flexDirection:'column'}}>
-                        <div style={{ width:400,display:'flex',flexDirection:'column'}}>
-                            <p style={{ width:'400px',fontFamily:'NeueHaasDisplayMedium',color:'white',fontSize:32,letterSpacing:1,margin:0}}>CONTENIDO</p>
+                    <Grid item xs={12} lg={6}  style={{width:'100%',height:300,display:'flex',alignItems:'flex-end',flexDirection:'column'}}>
+                        <div style={{ width: !width ? 380 : window.innerWidth  - 20,display:'flex',flexDirection:'column'}}>
+                            <p style={{ width: !width &&('400px'),fontFamily:'NeueHaasDisplayMedium',color:'white',fontSize:32,letterSpacing:1,margin:0}}>CONTENIDO</p>
                             <img src={x} height='14px' width='14px' style={{marginTop:10,marginBottom:10}}></img>
                             <p style={{ fontFamily:'PoppinsRegular',fontSize:16,color:'#d13852'}}>Los programas de FLUI COLLEGE son 100% on demand, accesibles donde quieras, cuando quieras, desde cualquier dispositivo 24/7. Vas a estar en comunicación permanente con profesionales para poder formarte y asesorarte durante todo el curso</p>
                             <p style={{ fontFamily:'PoppinsBold',fontSize:16,color:'#66c9f3'}}>Conocé a nuestro factor humano</p>
                         </div>
                     </Grid>
-                    <Grid item  xs={12} style={{width:'100%',margin:0,marginLeft:240,position:'relative'}}>
-                        <div style={{ width:100,height:50,position:'absolute',top:-60,right:380,display:'flex',justifyContent:'space-around',alignItems:'center',flexDirection:'row'}}>
+                    <Grid item  xs={12} style={{width:'100%',margin:0,marginLeft:!width&&(290) ,position:'relative'}}>
+                        <div style={{ width:100,height:50,position:'absolute',top:!width ? -60 : 360,right:!width ? 380 : 20,display:'flex',justifyContent:'space-around',alignItems:'center',flexDirection:'row'}}>
                             <button onClick={() => this.carousel.slidePrev()} style={{ cursor:'pointer',height:40,width:40,borderRadius:25,background:'#d13852',display:'flex',justifyContent:'center',alignItems:'center'}}>
                                 <img src={arrow} height='8px' width='auto'></img>
                             </button>
@@ -97,12 +98,11 @@ class Contenido extends React.Component {
                                 <img src={arrow} height='8px' width='auto' style={{ transform:`rotate(180deg)`}}></img>
                             </button>
                         </div>
-                    
-                        <Carousel itemsToShow={3} pagination={false} showArrows={false} ref={ref => (this.carousel = ref)}>
+                        <Carousel itemsToShow={!width ? 3 : 1.2} pagination={false} showArrows={false} ref={ref => (this.carousel = ref)}>
                             {this.state.humanos.map((item) => {
                                 return(
-                                    <div style={{width:335,height:340,display:'flex',justifyContent:'center',alignItems:'center'}}>
-                                        <div style={{ width:'95%',height:'95%',borderRadius:20,backgroundImage:`url(${item.img})`,backgroundSize:'cover',padding:15,display:'flex',justifyContent:'flex-end',alignItems:'flex-end',boxShadow: "3px 3px 6px 0 black"}}>
+                                    <div style={{width:!width ? 335 : window.innerWidth,height:340,display:'flex',justifyContent:'center',alignItems:'center'}}>
+                                        <div style={{ width:'95%',height:'95%',borderRadius:20,backgroundImage:`url(${item.img})`,backgroundSize:'cover',backgroundPosition:'center',padding:15,display:'flex',justifyContent:'flex-end',alignItems:'flex-end',boxShadow: "3px 3px 6px 0 black"}}>
                                             <div style={{ width:220,height:75,background:'white',borderRadius:10,borderTopRightRadius:0,display:'flex',flexDirection:'column',justifyContent:'center',paddingLeft:15}}>
                                                 <p style={{ margin:0,color:'black',fontFamily:'PoppinsSemiBold',lineHeight:1}}>{item.name}</p>
                                                 <p style={{ margin:0,color:'black',fontFamily:'PoppinsLight',marginTop:-2}}>{item.arroba}</p>
@@ -123,19 +123,19 @@ class Contenido extends React.Component {
                          
                         </Grid>
                     </Grid>
-                    <Grid item  xs={12} style={{width:'100%',margin:0,marginLeft:270    }}>
+                    <Grid item  xs={12} style={{width:'100%',margin:0,marginLeft:!width ? 290 : 20, marginTop: width && 20}}>
                         <p style={{ fontFamily:'NeueHaasDisplayMedium',color:'white',fontSize:32,letterSpacing:1,marginTop:50}}>MATERIAS</p>
                         <img src={x} height='14px' width='14px' style={{marginTop:10,marginBottom:10}}></img>
-                        <Grid container direction='row' style={{ width:'80%',paddingLeft:10,paddingRight:10}}>
+                        <Grid container direction='row' style={{ width:'100%',paddingLeft:10,paddingRight:10}}>
                             {this.state.materias.map((item) => {
                                 return(
-                                    <Grid item xs={4} style={{ display:'flex',flexDirection:'column',justifyContent:'center',height:200}}>
+                                    <Grid item xs={6} lg={4} style={{ display:'flex',flexDirection:'column',marginBottom:50}}>
                                         <div style={{ width:84,height:64,background:`url(${circle})`,backgroundSize:'cover',display:'flex'}}>
                                             <div style={{ height:64,width:64,display:'flex',justifyContent:'center',alignItems:'center'}}>
                                                 <p style={{ margin:0, fontFamily:'PoppinsMedium',fontSize:24,color:'#66c9f3',marginTop:5}}>{item.num}</p>
                                             </div>
                                         </div>
-                                        <p style={{ margin:0,marginTop:20,width:'50%',fontFamily:'PoppinsMedium',fontSize:14,color:'white'}}>{item.title}</p>
+                                        <p style={{ margin:0,marginTop:20,width:'50%',fontFamily:'PoppinsMedium',fontSize:16,color:'white'}}>{item.title}</p>
                                     </Grid>
                                 )
                             })}

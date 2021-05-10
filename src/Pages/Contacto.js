@@ -7,7 +7,8 @@ import facebook from '../assets/contacto/facebook.png'
 import instagram from '../assets/contacto/instagram.png'
 import youtube from '../assets/contacto/youtube.png'
 import tiktock from '../assets/contacto/tiktock.png'
-import { Button } from "@material-ui/core";
+import axios from 'axios';
+
 
 const input = {
     backgroundColor:'transparent',
@@ -50,20 +51,43 @@ class Contacto extends React.Component {
             '_blank' // <- This is what makes it open in a new window.
           );
     }
-    onSubmit(){
-        alert('hola')
+    onSubmit(event){
+        event.preventDefault()
+        var data = {
+            name: this.state.name,
+            text : this.state.text,
+            email : this.state.email
+        }
+        var config = {
+            method: 'post',
+            url: 'https://c8fvhi9iu5.execute-api.us-east-1.amazonaws.com/prod/send-data',
+            headers: { 
+            'Content-Type': 'application/json'
+            },
+            data : JSON.stringify(data) 
+        };
+        axios(config)
+        .then(res => {
+            this.setState({ loading:false})
+            console.log(res.data)
+        })
+        .catch(error => {
+            this.setState({ loading: false, network_error: false,new: false });
+            console.log('Ha ocurrido un error',error)
+        })
     }
     render() {
         const height = window.innerHeight;
         const negro = '#3b3a42';
         const borderColor = '#abbecc'
+        const width = window.innerWidth < 700
         return (
-            <div style={{ width:'100%',height:height, backgroundImage:`url(${background})`,backgroundSize:'cover'}}>
-                <Grid container direction='row' style={{ paddingTop:100}}>
-                    <Grid item xs={7} style={{ paddingLeft:270}}>
+            <div style={{ width:'100%',height: !width && height, backgroundImage:`url(${background})`,backgroundSize:'cover'}}>
+                <Grid container direction='row' style={{ paddingTop:100,height:'100%'}}>
+                    <Grid item xs={12} lg={7} style={{ padding:width && 10, paddingLeft:!width ? 270 : 10}}>
                         <p style={{ color:'#d13852',fontFamily:'NeueHaasDisplayBold',letterSpacing:1,margin:0}}>CONTACTO</p>
                         <p style={{ color:'#3b3a42',fontFamily:'NeueHaasDisplayBold',letterSpacing:1,margin:0,fontSize:30}}>TE ESCUCHAMOS!</p>
-                        <form onSubmit={() => this.onSubmit()}>
+                        <form onSubmit={(event) => this.onSubmit(event)}>
                             <Grid container direction={'row'} spacing={2} style={{ marginTop:30}}>
                                 <Grid item xs={6}>
                                     <div style={{height:45,width:'100%',background:'white', border:'solid 1px', borderColor:borderColor}}>
@@ -116,9 +140,9 @@ class Contacto extends React.Component {
                             </Grid>
                         </form>
                     </Grid>
-                    <Grid item xs={5} style={{paddingLeft:50}}>
+                    <Grid item xs={12} lg={5} style={{paddingLeft:50,display:'flex',flexDirection:'column',justifyContent:'flex-end'}}>
                         <p style={{ color:'#3b3a42',fontFamily:'NeueHaasDisplayBold',letterSpacing:1,margin:0,fontSize:30,marginTop:22,marginLeft:25}}>WHATSAPP ME</p>
-                        <div style={{ width:'100%',height:490,backgroundSize:'contain',backgroundRepeat:'no-repeat',display:'flex',alignItems:'flex-end', backgroundImage:`url(${qr})`}}>
+                        <div style={{ width:'100%',backgroundImage:`url(${qr})`,height:490,backgroundSize:'cover',backgroundRepeat:'no-repeat',display:'flex',alignItems:'flex-end'}}>
                             <div style={{ display:'flex',flexDirection:'row',height:40,width:200,marginBottom:50,justifyContent:'space-around',marginRight:50}}>
                                 <img src={facebook} onClick={() => this.link('facebook')} height='45px' width='auto' style={{cursor:'pointer'}}></img>
                                 <img src={instagram} onClick={() => this.link('instagram')}  height='45px' width='auto' style={{cursor:'pointer'}}></img>

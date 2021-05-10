@@ -27,22 +27,50 @@ class HomeView extends React.Component {
                 num = 0;
                 break;
             case 'College':
-                num = height*2;
+                num = height;
                 break;
             case 'Contenido':
-                num = height*3;
+                num = height*2;
                 break;
             case 'Padrinazgo':
                 num = height*5;
                 break;
             case 'Contacto':
-                num = height*6;
+                num = height*6  +20;
                 break;
             default:
                 break;
         }
         window.scroll({
-            top: num,
+            top: num - 60,
+            left: 0,
+            behavior: 'smooth'
+          })
+    }
+    redirectPhone(type){
+        var num;
+        const height = window.innerHeight
+        switch(type){
+            case 'Slider':
+                num = 0;
+                break;
+            case 'College':
+                num = height + 10;
+                break;
+            case 'Contenido':
+                num = height*2 + 100 ;
+                break;
+            case 'Padrinazgo':
+                num = height*5 + 500;
+                break;
+            case 'Contacto':
+                num = height*6 + 870;
+                break;
+            default:
+                break;
+        }
+        window.scroll({
+            top: num - 60,
             left: 0,
             behavior: 'smooth'
           })
@@ -51,14 +79,14 @@ class HomeView extends React.Component {
     render() {
         return (
             <div style={{flexDirection: 'row'}}>
-                <Header state='home' redirect={this.redirect} />
+                <Header state='home' redirect={this.redirect} redirectPhone={this.redirectPhone}  />
                 <Slider />
                 <College />
                 <UpGrade />
                 <Contenido />
                 <Padrinazgo />
                 <Contacto />
-                <Footer />
+                <Footer redirect={this.redirect} redirectPhone={this.redirectPhone}/> 
             </div>
         );
     }

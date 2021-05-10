@@ -66,6 +66,14 @@
     cursor: pointer;
     margin: 0;
 }
+.headerMenuPhone{
+    font-family: 'NeueHaasDisplayRoman';
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    margin: 0;
+    margin-top: 10px;
+}
 .headerMenuSelect{
     font-family: 'NeueHaasDisplayRoman';
     font-size: 12px;
@@ -74,7 +82,7 @@
     margin: 0;
 }
 .textCarousel1{
-    font-size: 144px;
+    font-size: 160px;
     margin: 0px;
     font-family: 'NeueHaasDisplayBold';
     line-height: 0.8;

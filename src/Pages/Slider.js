@@ -1,5 +1,6 @@
 import React from "react";
 import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
 import './Main.css'
 import background from '../assets/carousel/background.png'
 import background2 from '../assets/carousel/background2.png'
@@ -9,6 +10,7 @@ import instagram from '../assets/carousel/instagram.png'
 import youtube from '../assets/carousel/youtube.png'
 import tiktock from '../assets/carousel/tiktock.png'
 import Carousel from 'react-bootstrap/Carousel'
+import arrowLeft from '../assets/header/arrowLeft.png'
 
 
 class Slider extends React.Component {
@@ -42,39 +44,63 @@ class Slider extends React.Component {
             '_blank' // <- This is what makes it open in a new window.
           );
     }
+    linkForm(){
+        window.open(
+            'https://forms.gle/d16s5YvoBxRvRw5r8',
+            '_blank' // <- This is what makes it open in a new window.
+          );
+    }
 
     render() {
         const height = window.innerHeight;
+        const width = window.innerWidth < 700
         return (
             <div style={{ width:'100%',height:height}}>
                 <Carousel
                     controls={false}
-                    interval={50000}
+                    interval={5000}
+                    pause={false}
+                    indicators={width ? false : true}
                 >
                     <Carousel.Item>
-                        <div style={{ height:height,width:'100%',backgroundImage:`url(${background})`,backgroundSize:'cover'}}>
-                            <Grid container direction='row' style={{ height:'100%'}}>
-                                <Grid item xs={8} style={{ display:'flex',alignItems:'center', justifyContent:'center'}}>
-                                    <div style={{ display:'flex',flexDirection:'column'}}>
-                                        <p className={'textCarousel1'}>Sé</p>
-                                        <p className={'textCarousel1'}>Influ-</p>
-                                        <p className={'textCarousel1'} style={{ marginTop:-25}}>encer</p>
-                                        <p className={'textCarousel1Thin'}>Potenciá tu trabajo en redes</p>
+                        <div style={{ height:height,width:'100%',backgroundImage:`url(${background})`,backgroundSize:'cover',backgroundPosition:'center'}}>
+                            <Grid container direction='row' style={{}}>
+                                <Grid item xs={12} lg={8} style={{ display:'flex',alignItems:'center', justifyContent:'center',marginTop: !width ? 80 : 120}}>
+                                    <div style={{ display:'flex',flexDirection:'column',}}>
+                                        <p className={'textCarousel1'} style={{ fontSize: width &&(120)}}>Sé</p>
+                                        <p className={'textCarousel1'} style={{ fontSize: width &&(120)}}>Influ-</p>
+                                        <p className={'textCarousel1'} style={{ marginTop:-25,fontSize: width &&(120)}}>encer</p>
+                                        <p className={'textCarousel1Thin'} >Potenciá tu trabajo en redes</p>
                                     </div>
                                 </Grid>
-                                <Grid item xs={4} style={{ display:'flex',alignItems:'center', justifyContent:'flex-end'}}>
-                                    <div style={{ display:'flex',flexDirection:'column',height:200,justifyContent:'space-around',marginRight:50}}>
-                                        <img src={facebook} onClick={() => this.link('facebook')} height='45px' width='auto' style={{cursor:'pointer'}}></img>
-                                        <img src={instagram} onClick={() => this.link('instagram')} height='45px' width='auto' style={{cursor:'pointer'}}></img>
-                                        <img src={youtube} onClick={() => this.link('youtube')} height='45px' width='auto' style={{cursor:'pointer'}}></img>
-                                        <img src={tiktock} onClick={() => this.link('ticktock')} height='45px' width='auto' style={{cursor:'pointer'}}></img>
-                                    </div>
-                                </Grid>
+                                {!width ?
+                                    <Grid item   lg={4} style={{ display:'flex',alignItems:'center', justifyContent:'flex-end',height:height}}>                      
+                                        <div style={{ display:'flex',flexDirection:'column',height:200,justifyContent:'space-around',marginRight:50}}>
+                                            <img src={facebook} onClick={() => this.link('facebook')} height='45px' width='auto' style={{cursor:'pointer'}}></img>
+                                            <img src={instagram} onClick={() => this.link('instagram')} height='45px' width='auto' style={{cursor:'pointer'}}></img>
+                                            <img src={youtube} onClick={() => this.link('youtube')} height='45px' width='auto' style={{cursor:'pointer'}}></img>
+                                            <img src={tiktock} onClick={() => this.link('ticktock')} height='45px' width='auto' style={{cursor:'pointer'}}></img>
+                                        </div>
+                                    </Grid>
+                                :
+                                <Button
+                                    style={{ backgroundColor:'#d13852',paddingTop:10,height:55,paddingBottom:10,marginLeft:15,marginTop:20}}
+                                    variant="contained"
+                                    startIcon={
+                                        <img src={arrowLeft} height='20px' width='auto'></img>
+                                    }
+                                    onClick={() => this.linkForm()}
+                                    >
+                                    <p style={{fontFamily:'NeueHaasDisplayMedium',margin:0,color:'white',fontSize:16}}>preinscribite</p>
+                                </Button>
+                                }
+                               
                             </Grid>
                         </div>
                     </Carousel.Item>
+                    {!width && (
                     <Carousel.Item>
-                        <div style={{ height:height,width:'100%',backgroundImage:`url(${background2})`,backgroundSize:'cover'}}>
+                        <div style={{ height:height,width:'100%',backgroundImage:`url(${background2})`,backgroundSize:'cover',backgroundPosition:'center'}}>
                             <Grid container direction='row' style={{ height:'100%'}}>
                                 <Grid item xs={8}></Grid>
                                 <Grid item xs={4} style={{ display:'flex',alignItems:'center', justifyContent:'flex-end'}}>
@@ -88,8 +114,10 @@ class Slider extends React.Component {
                             </Grid>
                         </div>
                     </Carousel.Item>
+                    )}
+                    {!width && (
                     <Carousel.Item>
-                        <div style={{ height:height,width:'100%',backgroundImage:`url(${background3})`,backgroundSize:'cover'}}>
+                        <div style={{ height:height,width:'100%',backgroundImage:`url(${background3})`,backgroundSize:'cover',backgroundPosition:'center'}}>
                             <Grid container direction='row' style={{ height:'100%'}}>
                                 <Grid item xs={8}></Grid>
                                 <Grid item xs={4} style={{ display:'flex',alignItems:'center', justifyContent:'flex-end'}}>
@@ -103,6 +131,8 @@ class Slider extends React.Component {
                             </Grid>
                         </div>
                     </Carousel.Item>
+                    )}
+                    
                 </Carousel>
             </div>
         );
