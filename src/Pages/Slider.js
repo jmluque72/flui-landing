@@ -84,7 +84,7 @@ class Slider extends React.Component {
                                     </Grid>
                                 :
                                 <Button
-                                    style={{ backgroundColor:'#d13852',paddingTop:10,height:55,paddingBottom:10,marginLeft:15,marginTop:20}}
+                                    style={{ backgroundColor:'#d13852',height:45,width:180,marginLeft:15,marginTop:20}}
                                     variant="contained"
                                     startIcon={
                                         <img src={arrowLeft} height='20px' width='auto'></img>

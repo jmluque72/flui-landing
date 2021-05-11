@@ -58,7 +58,6 @@ class Header extends React.Component {
     }
     render() {
         const width = window.innerWidth
-        console.log(width)
         if(width > 700){
             return (
                 <AppBar style={{ backgroundColor:'#151515',height:80,display:'flex',justifyContent:'center',boxShadow:'none',borderBottom:'solid 1px rgba(255,255,255,0.1)'}}>
@@ -78,7 +77,7 @@ class Header extends React.Component {
                             </Grid>
                             <Grid item xs={4} s={4} m={4} l={2} xl={2} style={{display:'flex',justifyContent:'center'}}>
                                 <Button
-                                    style={{ backgroundColor:'#d13852',paddingTop:10,paddingBottom:10}}
+                                    style={{ backgroundColor:'#d13852',height:45,width:180}}
                                     variant="contained"
                                     startIcon={
                                         <img src={arrowLeft} height='20px' width='auto'></img>
@@ -103,7 +102,7 @@ class Header extends React.Component {
                             </Grid>
                         </Grid>
                     </Toolbar>
-                    <div style={{ margin:0,height:360,background:this.state.menu ? '#bbbbbb' : 'transparent',display:'flex',flexDirection:'column',width:'80%',position:'absolute',top:0,left:0,borderBottomRightRadius:50}}>
+                    <div style={{ margin:0,height:this.state.menu ? 360 : 80,background:this.state.menu ? '#151515' : 'transparent',display:'flex',flexDirection:'column',width:'80%',position:'absolute',top:0,left:0,borderBottomRightRadius:50}}>
                         <div style={{ display:'flex',justifyContent:'space-between',alignItems:'center',width:'100%',height:80,padding:15}}>
                             <img src={!this.state.menu ? hamburger :  hamburgerSelected} onClick={() => this.setState({ menu : !this.state.menu})} height='25px' width='auto' style={{ cursor:'pointer'}}></img>
                            {this.state.menu && (

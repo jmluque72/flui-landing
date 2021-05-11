@@ -30,7 +30,7 @@ class HomeView extends React.Component {
                 num = height;
                 break;
             case 'Contenido':
-                num = height*2;
+                num = height*2 + 50;
                 break;
             case 'Padrinazgo':
                 num = height*5;
@@ -61,10 +61,10 @@ class HomeView extends React.Component {
                 num = height*2 + 100 ;
                 break;
             case 'Padrinazgo':
-                num = height*5 + 500;
+                num = height*5 + 580;
                 break;
             case 'Contacto':
-                num = height*6 + 870;
+                num = height*6 + 980;
                 break;
             default:
                 break;

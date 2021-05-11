@@ -15,7 +15,7 @@ class UpGrade extends React.Component {
     }
     link2(){
         window.open(
-            'https://zappa-1swsvfrgq.s3.amazonaws.com/BROCHURE.pdf',
+            'https://zappa-1swsvfrgq.s3.amazonaws.com/TEMARIO.pdf',
             '_blank' // <- This is what makes it open in a new window.
           );
     }
@@ -28,9 +28,9 @@ class UpGrade extends React.Component {
             <div style={{ width:'100%',height:height,backgroundColor:'black'}}>
                 <div style={{ width:'100%',height:height, display:'flex',flexDirection:'column',backgroundImage:`url(${background})`,backgroundSize:'cover',backgroundRepeat:'no-repeat',backgroundPosition:'center'}}>
                     <Grid container style={{ height:'100%'}}>
-                        <Grid item  xs={12} lg={6}  style={{height:'100%',width:'100%',display:'flex',justifyContent:'center',alignItems:!width ? 'flex-end' : 'center',flexDirection:'column'}}>
-                            <img src={title} height='auto' width={ !width ? '400px' : '350px'} ></img>
-                            <p style={{ width: !width ? '400px' : '90%',fontFamily:'NeueHaasDisplayThinItalic',color:'white',fontSize:20,marginTop:15}}>{t}</p>
+                        <Grid item  xs={11} sm={8} md={8} lg={6}  style={{height:'100%',width:'100%',display:'flex',justifyContent:'center',alignItems:!width ? 'flex-end' : 'center',flexDirection:'column'}}>
+                            <img src={title} height='auto' width={ !width ? '400px' : '350px'}style={{ paddingLeft:width&& 15}} ></img>
+                            <p style={{ width: !width ? '400px' : '300px',fontFamily:'NeueHaasDisplayThinItalic',color:'white',fontSize:20,marginTop:15}}>{t}</p>
                             <div style={{ width: !width ? 400 : 300,marginLeft: width&&(50) }}>
                                 <a onClick={() => this.link2()} download style={{ textDecoration:'none'}}>
                                     <div style={{ width:250,cursor:'pointer',height:60,display:'flex',flexDirection:'row'}}>

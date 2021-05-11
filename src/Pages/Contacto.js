@@ -8,7 +8,7 @@ import instagram from '../assets/contacto/instagram.png'
 import youtube from '../assets/contacto/youtube.png'
 import tiktock from '../assets/contacto/tiktock.png'
 import axios from 'axios';
-
+import Loading from '../utils/Loading.js'
 
 const input = {
     backgroundColor:'transparent',
@@ -60,16 +60,16 @@ class Contacto extends React.Component {
         }
         var config = {
             method: 'post',
-            url: 'https://c8fvhi9iu5.execute-api.us-east-1.amazonaws.com/prod/send-data',
+            url: 'https://9iri68w9n5.execute-api.sa-east-1.amazonaws.com/flui/send-data/',
             headers: { 
             'Content-Type': 'application/json'
             },
-            data : JSON.stringify(data) 
+            data : data
         };
+        this.setState({ loading : true})
         axios(config)
         .then(res => {
-            this.setState({ loading:false})
-            console.log(res.data)
+            this.setState({ loading:false,name: '', text : '', email :'' })
         })
         .catch(error => {
             this.setState({ loading: false, network_error: false,new: false });
@@ -80,15 +80,15 @@ class Contacto extends React.Component {
         const height = window.innerHeight;
         const negro = '#3b3a42';
         const borderColor = '#abbecc'
-        const width = window.innerWidth < 700
+        const width = window.innerWidth < 1000
         return (
             <div style={{ width:'100%',height: !width && height, backgroundImage:`url(${background})`,backgroundSize:'cover'}}>
                 <Grid container direction='row' style={{ paddingTop:100,height:'100%'}}>
-                    <Grid item xs={12} lg={7} style={{ padding:width && 10, paddingLeft:!width ? 270 : 10}}>
+                    <Grid item xs={12} sm={7} md={7}  lg={7} style={{ padding:width && 10, paddingLeft:!width ? 270 : 10}}>
                         <p style={{ color:'#d13852',fontFamily:'NeueHaasDisplayBold',letterSpacing:1,margin:0}}>CONTACTO</p>
                         <p style={{ color:'#3b3a42',fontFamily:'NeueHaasDisplayBold',letterSpacing:1,margin:0,fontSize:30}}>TE ESCUCHAMOS!</p>
                         <form onSubmit={(event) => this.onSubmit(event)}>
-                            <Grid container direction={'row'} spacing={2} style={{ marginTop:30}}>
+                            <Grid container direction={'row'} spacing={2} style={{ marginTop:40}}>
                                 <Grid item xs={6}>
                                     <div style={{height:45,width:'100%',background:'white', border:'solid 1px', borderColor:borderColor}}>
                                         <input 
@@ -140,9 +140,9 @@ class Contacto extends React.Component {
                             </Grid>
                         </form>
                     </Grid>
-                    <Grid item xs={12} lg={5} style={{paddingLeft:50,display:'flex',flexDirection:'column',justifyContent:'flex-end'}}>
-                        <p style={{ color:'#3b3a42',fontFamily:'NeueHaasDisplayBold',letterSpacing:1,margin:0,fontSize:30,marginTop:22,marginLeft:25}}>WHATSAPP ME</p>
-                        <div style={{ width:'100%',backgroundImage:`url(${qr})`,height:490,backgroundSize:'cover',backgroundRepeat:'no-repeat',display:'flex',alignItems:'flex-end'}}>
+                    <Grid item xs={12} sm={5} md={5}  lg={5} style={{paddingLeft:50,display:'flex',flexDirection:'column',justifyContent:'',position:'relative',minHeight:width && 600}}>
+                        <p style={{ color:'#3b3a42',fontFamily:'NeueHaasDisplayBold',letterSpacing:1,margin:0,fontSize:30,marginTop:!width ? 20 : 10,marginLeft:25}}>WHATSAPP ME</p>
+                        <div style={{ width:'90%',marginLeft:'10%',backgroundImage:`url(${qr})`,height:'90%',backgroundSize:'cover',backgroundRepeat:'no-repeat',display:'flex',alignItems:'flex-end',position:'absolute',bottom:0,left:0}}>
                             <div style={{ display:'flex',flexDirection:'row',height:40,width:200,marginBottom:50,justifyContent:'space-around',marginRight:50}}>
                                 <img src={facebook} onClick={() => this.link('facebook')} height='45px' width='auto' style={{cursor:'pointer'}}></img>
                                 <img src={instagram} onClick={() => this.link('instagram')}  height='45px' width='auto' style={{cursor:'pointer'}}></img>
@@ -152,6 +152,7 @@ class Contacto extends React.Component {
                         </div>
                     </Grid>
                 </Grid>
+                <Loading state={this.state.loading}></Loading>
             </div>
         );
     }
