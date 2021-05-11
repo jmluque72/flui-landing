@@ -32,7 +32,7 @@ class College extends React.Component {
                             <div style={{ width:450,height:250,display:'flex',flexDirection:'column',paddingLeft:50}}>
                                 <p style={{ color:'#d23852', fontFamily:'NeueHaasDisplayMedium',fontSize:14,margin:0}}>SOBRE FLUI COLLEGE</p>
                                 <p style={{ color:'black', fontFamily:'NeueHaasDisplayMedium',fontSize:40,margin:0}}>Fluir e Influir</p>
-                                <p style={{ color:'#bbbbbb', fontFamily:'NeueHaasDisplayRoman',fontSize:20,width:'90%',lineHeight:1.3,margin:0}}>Somos la primera escuela on demand del país, especializada en la formación de influencers. S   abemos cómo potenciar tu marca propia y enseñarte a utilizar estratégicamente todas las herramientas digitales para que seas un influencer profesional.</p>
+                                <p style={{ color:'#bbbbbb', fontFamily:'NeueHaasDisplayRoman',fontSize:20,width:'90%',lineHeight:1.3,margin:0}}>Somos la primera escuela on demand del país, especializada en la formación de influencers. Sabemos cómo potenciar tu marca propia y enseñarte a utilizar estratégicamente todas las herramientas digitales para que seas un influencer profesional.</p>
                             </div>
                         </Grid>
                     </Grid>
