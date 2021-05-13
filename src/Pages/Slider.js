@@ -11,7 +11,7 @@ import youtube from '../assets/carousel/youtube.png'
 import tiktock from '../assets/carousel/tiktock.png'
 import Carousel from 'react-bootstrap/Carousel'
 import arrowLeft from '../assets/header/arrowLeft.png'
-
+import AddIcon from '@material-ui/icons/Add';
 
 class Slider extends React.Component {
     constructor(props) {
@@ -50,6 +50,12 @@ class Slider extends React.Component {
             '_blank' // <- This is what makes it open in a new window.
           );
     }
+    link2(){
+        window.open(
+            'https://zappa-1swsvfrgq.s3.amazonaws.com/brochure_alumno.pdf',
+            '_blank' // <- This is what makes it open in a new window.
+          );
+    }
 
     render() {
         const height = window.innerHeight;
@@ -71,6 +77,16 @@ class Slider extends React.Component {
                                         <p className={'textCarousel1'} style={{ fontSize: width &&(120)}}>Influ-</p>
                                         <p className={'textCarousel1'} style={{ marginTop:-25,fontSize: width &&(120)}}>encer</p>
                                         <p className={'textCarousel1Thin'} >Potenciá tu trabajo en redes</p>
+                                        <Button
+                                            style={{ backgroundColor:'#d13852',height:45,width:width ? 180 : 200,marginLeft:8,marginTop:20}}
+                                            variant="contained"
+                                            startIcon={
+                                                <AddIcon style={{fontSize:30,color:'white'}}></AddIcon>
+                                            }
+                                            onClick={() => this.link2()}
+                                            >
+                                            <p style={{fontFamily:'NeueHaasDisplayMedium',margin:0,color:'white',fontSize:16}}>INFO</p>
+                                        </Button>
                                     </div>
                                 </Grid>
                                 {!width ?
