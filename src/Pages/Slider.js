@@ -71,45 +71,62 @@ class Slider extends React.Component {
                     <Carousel.Item>
                         <div style={{ height:height,width:'100%',backgroundImage:`url(${background})`,backgroundSize:'cover',backgroundPosition:'center'}}>
                             <Grid container direction='row' style={{}}>
-                                <Grid item xs={12} lg={8} style={{ display:'flex',alignItems:'center', justifyContent:'center',marginTop: !width ? 80 : 120}}>
-                                    <div style={{ display:'flex',flexDirection:'column',}}>
+                                <Grid item xs={12} lg={8} style={{ display:'flex',alignItems:'center',alignItems:'center', justifyContent:'center',marginTop: !width ? 80 : 120}}>
+                                    <div style={{ display:'flex',flexDirection:'column'}}>
                                         <p className={'textCarousel1'} style={{ fontSize: width &&(120)}}>Sé</p>
                                         <p className={'textCarousel1'} style={{ fontSize: width &&(120)}}>Influ-</p>
                                         <p className={'textCarousel1'} style={{ marginTop:-25,fontSize: width &&(120)}}>encer</p>
                                         <p className={'textCarousel1Thin'} >Potenciá tu trabajo en redes</p>
-                                        <Button
-                                            style={{ backgroundColor:'#d13852',height:45,width:width ? 180 : 200,marginLeft:8,marginTop:20}}
-                                            variant="contained"
-                                            startIcon={
-                                                <AddIcon style={{fontSize:30,color:'white'}}></AddIcon>
-                                            }
-                                            onClick={() => this.link2()}
-                                            >
-                                            <p style={{fontFamily:'NeueHaasDisplayMedium',margin:0,color:'white',fontSize:16}}>INFO</p>
-                                        </Button>
+                                        {!width && (
+                                            <Button
+                                                style={{ backgroundColor:'#d13852',height:45,width:width ? 180 : 200,marginLeft:0,marginTop:10}}
+                                                variant="contained"
+                                                startIcon={
+                                                    <AddIcon style={{fontSize:30}}></AddIcon>
+                                                }
+                                                onClick={() => this.link2()}
+                                                >
+                                                <p style={{fontFamily:'NeueHaasDisplayMedium',margin:0,color:'white',fontSize:16}}>INFO</p>
+                                            </Button>
+                                        )}
+                                     
                                     </div>
                                 </Grid>
-                                {!width ?
+                                {!width && (
                                     <Grid item   lg={4} style={{ display:'flex',alignItems:'center', justifyContent:'flex-end',height:height}}>                      
-                                        <div style={{ display:'flex',flexDirection:'column',height:200,justifyContent:'space-around',marginRight:50}}>
-                                            <img src={facebook} onClick={() => this.link('facebook')} height='45px' width='auto' style={{cursor:'pointer'}}></img>
-                                            <img src={instagram} onClick={() => this.link('instagram')} height='45px' width='auto' style={{cursor:'pointer'}}></img>
-                                            <img src={youtube} onClick={() => this.link('youtube')} height='45px' width='auto' style={{cursor:'pointer'}}></img>
-                                            <img src={tiktock} onClick={() => this.link('ticktock')} height='45px' width='auto' style={{cursor:'pointer'}}></img>
-                                        </div>
+                                            <div style={{ display:'flex',flexDirection:'column',height:200,justifyContent:'space-around',marginRight:50}}>
+                                                <img src={facebook} onClick={() => this.link('facebook')} height='45px' width='auto' style={{cursor:'pointer'}}></img>
+                                                <img src={instagram} onClick={() => this.link('instagram')} height='45px' width='auto' style={{cursor:'pointer'}}></img>
+                                                <img src={youtube} onClick={() => this.link('youtube')} height='45px' width='auto' style={{cursor:'pointer'}}></img>
+                                                <img src={tiktock} onClick={() => this.link('ticktock')} height='45px' width='auto' style={{cursor:'pointer'}}></img>
+                                            </div>
                                     </Grid>
-                                :
-                                <Button
-                                    style={{ backgroundColor:'#d13852',height:45,width:180,marginLeft:15,marginTop:20}}
-                                    variant="contained"
-                                    startIcon={
-                                        <img src={arrowLeft} height='20px' width='auto'></img>
-                                    }
-                                    onClick={() => this.linkForm()}
-                                    >
-                                    <p style={{fontFamily:'NeueHaasDisplayMedium',margin:0,color:'white',fontSize:16}}>preinscribite</p>
-                                </Button>
+                                    )
                                 }
+                                <div style={{ display:'flex',flexDirection:'column',paddingLeft:10}}>
+                                    <Button
+                                        style={{ backgroundColor:'#d13852',height:45,width:width ? 180 : 200,marginLeft:0,marginTop:10}}
+                                        variant="contained"
+                                        startIcon={
+                                            <AddIcon style={{fontSize:30}}></AddIcon>
+                                        }
+                                        onClick={() => this.link2()}
+                                        >
+                                        <p style={{fontFamily:'NeueHaasDisplayMedium',margin:0,color:'white',fontSize:16}}>INFO</p>
+                                    </Button>
+                                    <Button
+                                        style={{ backgroundColor:'#d13852',height:45,width:180,marginLeft:0,marginTop:10}}
+                                        variant="contained"
+                                        startIcon={
+                                            <img src={arrowLeft} height='20px' width='auto'></img>
+                                        }
+                                        onClick={() => this.linkForm()}
+                                    >
+                                        <p style={{fontFamily:'NeueHaasDisplayMedium',margin:0,color:'white',fontSize:16}}>preinscribite</p>
+                                    </Button>
+                                </div>
+                                  
+                                
                                
                             </Grid>
                         </div>
