@@ -76,7 +76,7 @@ class Slider extends React.Component {
                                         <p className={'textCarousel1'} style={{ fontSize: width &&(120)}}>Sé</p>
                                         <p className={'textCarousel1'} style={{ fontSize: width &&(120)}}>Influ-</p>
                                         <p className={'textCarousel1'} style={{ marginTop:-25,fontSize: width &&(120)}}>encer</p>
-                                        <p className={'textCarousel1Thin'} >Potenciá tu trabajo en redes</p>
+                                        <p className={'textCarousel1Thin'} >La primera escuela on demand</p>
                                         {!width && (
                                             <Button
                                                 style={{ backgroundColor:'#d13852',height:45,width:width ? 180 : 200,marginLeft:0,marginTop:10}}
