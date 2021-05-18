@@ -24,6 +24,7 @@ import DiegoYorbandi from '../assets/humanos/diegoyorbandi.jpg'
 import MartinHuergo from '../assets/humanos/martinhuergo.png'
 import EmanuelPérez from '../assets/humanos/emanuelperez.jpg'
 import IrisMacaluso from '../assets/humanos/irismacaluso.png'
+import CamiloNicolas from '../assets/humanos/CamiloNicolas.png'
 import GastonMassa from '../assets/humanos/gastonmassa.jpg'
 import WillyMagia from '../assets/humanos/willymagia.jpg'
 import AgustinaLópez from '../assets/humanos/agustinalopez.jpg'
@@ -38,6 +39,7 @@ class Contenido extends React.Component {
         this.state = {
             humanos: [
                 {name: 'Willy Magia', arroba: '@willymagia', img: WillyMagia },
+                {name: 'Camilo Nicolás', arroba: '@camilonicolások', img: CamiloNicolas },
                 {name: 'Gaston Massa', arroba: '@gastonmassa', img: GastonMassa },
                 {name: 'Emiliana Felizzia', arroba: '@milifelizzia', img:  EmilianaFelizzia },
                 {name: 'Juanjo Cobo', arroba: '@shotbyjuanjo', img: JuanjoCobbo },
