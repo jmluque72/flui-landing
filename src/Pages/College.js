@@ -25,7 +25,7 @@ class College extends React.Component {
                                 {/* <div style={{ width:100,height:100,borderRadius:5,border:'solid 1px #d2d2d2',display:'flex',justifyContent:'center',alignItems:'center'}}>
                                     <div style={{ width:80,height:80,backgroundColor:'#d23852',borderRadius:5}}></div>
                                 </div> */}
-                                <iframe width="90%" height="90%" src="https://www.youtube.com/embed/5uY6mhY6NvA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen allow="fullscreen;"></iframe>
+                                <iframe width="90%" height="90%" src="https://www.youtube.com/embed/5uY6mhY6NvA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen allow="fullscreen;"></iframe>
                             </div>
                         </Grid>
                         <Grid item xs={12} sm={12} md={6} lg={6} style={{display:'flex',alignItems:'center',justifyContent:!width ?'flex-start' : 'center'}}>

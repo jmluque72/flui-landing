@@ -18,6 +18,8 @@ class Slider extends React.Component {
         super(props);
         // we use this to make the card to appear after the page has been rendered
         this.state = {
+            textButton: 'preinscribite'
+
         };
     }
 
@@ -43,6 +45,12 @@ class Slider extends React.Component {
             page,
             '_blank' // <- This is what makes it open in a new window.
           );
+    }
+    componentDidMount(){
+        const d = new Date()
+        if(d.getDate() >= 24 ){
+            this.setState({textButton : 'inscribite'})
+        }
     }
     linkForm(){
         window.open(
@@ -103,28 +111,32 @@ class Slider extends React.Component {
                                     </Grid>
                                     )
                                 }
-                                <div style={{ display:'flex',flexDirection:'column',paddingLeft:10}}>
-                                    <Button
-                                        style={{ backgroundColor:'#d13852',height:45,width:width ? 180 : 200,marginLeft:0,marginTop:10}}
-                                        variant="contained"
-                                        startIcon={
-                                            <AddIcon style={{fontSize:30}}></AddIcon>
-                                        }
-                                        onClick={() => this.link2()}
+                                 {width && (
+                                    <div style={{ display:'flex',flexDirection:'column',paddingLeft:10}}>
+                                        <Button
+                                            style={{ backgroundColor:'#d13852',height:45,width:width ? 180 : 200,marginLeft:0,marginTop:10}}
+                                            variant="contained"
+                                            startIcon={
+                                                <AddIcon style={{fontSize:30}}></AddIcon>
+                                            }
+                                            onClick={() => this.link2()}
+                                            >
+                                            <p style={{fontFamily:'NeueHaasDisplayMedium',margin:0,color:'white',fontSize:16}}>INFO</p>
+                                        </Button>
+                                        <Button
+                                            style={{ backgroundColor:'#d13852',height:45,width:180,marginLeft:0,marginTop:10}}
+                                            variant="contained"
+                                            startIcon={
+                                                <img src={arrowLeft} height='20px' width='auto'></img>
+                                            }
+                                            onClick={() => this.linkForm()}
                                         >
-                                        <p style={{fontFamily:'NeueHaasDisplayMedium',margin:0,color:'white',fontSize:16}}>INFO</p>
-                                    </Button>
-                                    <Button
-                                        style={{ backgroundColor:'#d13852',height:45,width:180,marginLeft:0,marginTop:10}}
-                                        variant="contained"
-                                        startIcon={
-                                            <img src={arrowLeft} height='20px' width='auto'></img>
-                                        }
-                                        onClick={() => this.linkForm()}
-                                    >
-                                        <p style={{fontFamily:'NeueHaasDisplayMedium',margin:0,color:'white',fontSize:16}}>preinscribite</p>
-                                    </Button>
-                                </div>
+                                            <p style={{fontFamily:'NeueHaasDisplayMedium',margin:0,color:'white',fontSize:16}}>{this.state.textButton}</p>
+                                        </Button>
+                                    </div>
+                                    )
+                                }
+                               
                                   
                                 
                                

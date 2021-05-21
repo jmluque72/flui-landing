@@ -59,7 +59,7 @@ class Contenido extends React.Component {
                 {name: 'Mey Valdés', arroba: '', img: MeyValdés },
                 {name: 'Kevin Gorfinkel', arroba: '@kevingorfin', img: KevinGorfinkel },
                 {name: 'Fernando Sosa Loyola', arroba: '@fersosaloyola', img: FernandoSosaLoyola },
-                {name: 'Lisandro Iacovelli', arroba: '@licharecomienda', img: LisandroIacovelli },
+                {name: 'Lisandro Iacovelli', arroba: '@lichadelapeople', img: LisandroIacovelli },
                 {name: 'Emanuel Pérez', arroba: '@emanuelle.pe', img: EmanuelPérez },
                 {name: 'Iris Macaluso', arroba: '@maciris', img: IrisMacaluso },
                 {name: 'Juan Ferreyra', arroba: '@el.juan.ferreyra', img: JuanFerreyra },
@@ -102,9 +102,9 @@ class Contenido extends React.Component {
                             </button>
                         </div>
                         <Carousel itemsToShow={!width ? 3 : 1.2} pagination={false} showArrows={false} ref={ref => (this.carousel = ref)}>
-                            {this.state.humanos.map((item) => {
+                            {this.state.humanos.map((item,index) => {
                                 return(
-                                    <div style={{width:!width ? 335 : window.innerWidth,height:340,display:'flex',justifyContent:'center',alignItems:'center'}}>
+                                    <div key={index} style={{width:!width ? 335 : window.innerWidth,height:340,display:'flex',justifyContent:'center',alignItems:'center'}}>
                                         <div style={{ width:'95%',height:'95%',borderRadius:20,backgroundImage:`url(${item.img})`,backgroundSize:'cover',backgroundPosition:'center',padding:15,display:'flex',justifyContent:'flex-end',alignItems:'flex-end',boxShadow: "3px 3px 6px 0 black"}}>
                                             <div style={{ width:220,height:75,background:'white',borderRadius:10,borderTopRightRadius:0,display:'flex',flexDirection:'column',justifyContent:'center',paddingLeft:15}}>
                                                 <p style={{ margin:0,color:'black',fontFamily:'PoppinsSemiBold',lineHeight:1}}>{item.name}</p>
@@ -116,9 +116,9 @@ class Contenido extends React.Component {
                             })}
                         </Carousel> 
                         <Grid container spacing={1} style={{ height:100,width:60,position:'absolute',top:40,left:10}}>
-                            {seis.map((item) => {
+                            {seis.map((item,index) => {
                                 return(
-                                <Grid item xs={6}>
+                                <Grid key={index} item xs={6}>
                                     <img src={x} height='12px' width='12px' ></img>
                                 </Grid>
                                 )
@@ -130,9 +130,9 @@ class Contenido extends React.Component {
                         <p style={{ fontFamily:'NeueHaasDisplayMedium',color:'white',fontSize:32,letterSpacing:1,marginTop:50}}>MATERIAS</p>
                         <img src={x} height='14px' width='14px' style={{marginTop:10,marginBottom:10}}></img>
                         <Grid container direction='row' style={{ width:'100%',paddingLeft:10,paddingRight:10}}>
-                            {this.state.materias.map((item) => {
+                            {this.state.materias.map((item,index) => {
                                 return(
-                                    <Grid item xs={6} lg={4} style={{ display:'flex',flexDirection:'column',marginBottom:50}}>
+                                    <Grid key={index} item xs={6} lg={4} style={{ display:'flex',flexDirection:'column',marginBottom:50}}>
                                         <div style={{ width:84,height:64,background:`url(${circle})`,backgroundSize:'cover',display:'flex'}}>
                                             <div style={{ height:64,width:64,display:'flex',justifyContent:'center',alignItems:'center'}}>
                                                 <p style={{ margin:0, fontFamily:'PoppinsMedium',fontSize:24,color:'#66c9f3',marginTop:5}}>{item.num}</p>

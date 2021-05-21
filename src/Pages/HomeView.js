@@ -91,9 +91,4 @@ class HomeView extends React.Component {
         );
     }
 }
-
-HomeView.propTypes = {
-    classes: PropTypes.object.isRequired
-};
-
 export default HomeView;
