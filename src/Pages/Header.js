@@ -19,7 +19,7 @@ class Header extends React.Component {
         // we use this to make the card to appear after the page has been rendered
         this.state = {
             select: 'Slider',
-            textButton: 'preinscribite'
+            textButton: 'inscribite'
         };
         this.header = this.header.bind(this);;
     }
@@ -33,10 +33,6 @@ class Header extends React.Component {
       
     }
     componentDidMount() {
-        const d = new Date()
-        if(d.getDate() >= 24 ){
-            this.setState({textButton : 'inscribite'})
-        }
         window.addEventListener('scroll',  () => this.setHeader())
       }
     setHeader(){

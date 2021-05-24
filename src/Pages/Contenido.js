@@ -22,7 +22,7 @@ import JuanManuelZeballos from '../assets/humanos/juanmanuelzeballos.jpg'
 import JuanFerreyra from '../assets/humanos/juanferreyra.png'
 import DiegoYorbandi from '../assets/humanos/diegoyorbandi.jpg'
 import MartinHuergo from '../assets/humanos/martinhuergo.png'
-import EmanuelPérez from '../assets/humanos/emanuelperez.jpg'
+// import EmanuelPérez from '../assets/humanos/emanuelperez.jpg'
 import IrisMacaluso from '../assets/humanos/irismacaluso.png'
 import CamiloNicolas from '../assets/humanos/CamiloNicolas.png'
 import GastonMassa from '../assets/humanos/gastonmassa.jpg'
@@ -60,7 +60,7 @@ class Contenido extends React.Component {
                 {name: 'Kevin Gorfinkel', arroba: '@kevingorfin', img: KevinGorfinkel },
                 {name: 'Fernando Sosa Loyola', arroba: '@fersosaloyola', img: FernandoSosaLoyola },
                 {name: 'Lisandro Iacovelli', arroba: '@lichadelapeople', img: LisandroIacovelli },
-                {name: 'Emanuel Pérez', arroba: '@emanuelle.pe', img: EmanuelPérez },
+                // {name: 'Emanuel Pérez', arroba: '@emanuelle.pe', img: EmanuelPérez },
                 {name: 'Iris Macaluso', arroba: '@maciris', img: IrisMacaluso },
                 {name: 'Juan Ferreyra', arroba: '@el.juan.ferreyra', img: JuanFerreyra },
 

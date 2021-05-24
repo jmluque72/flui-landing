@@ -18,7 +18,7 @@ class Slider extends React.Component {
         super(props);
         // we use this to make the card to appear after the page has been rendered
         this.state = {
-            textButton: 'preinscribite'
+            textButton: 'inscribite'
 
         };
     }
@@ -45,12 +45,6 @@ class Slider extends React.Component {
             page,
             '_blank' // <- This is what makes it open in a new window.
           );
-    }
-    componentDidMount(){
-        const d = new Date()
-        if(d.getDate() >= 24 ){
-            this.setState({textButton : 'inscribite'})
-        }
     }
     linkForm(){
         window.open(
