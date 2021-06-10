@@ -10,6 +10,7 @@ import Contenido from "./Contenido.js";
 import Padrinazgo from './Padrinazgo.js'
 import Contacto from './Contacto.js'
 import Footer from './Footer.js'
+import WhatsAppLink from "./WhatsAppLink.js";
 
 class HomeView extends React.Component {
     constructor(props) {
@@ -86,7 +87,8 @@ class HomeView extends React.Component {
                 <Contenido />
                 <Padrinazgo />
                 <Contacto />
-                <Footer redirect={this.redirect} redirectPhone={this.redirectPhone}/> 
+                <Footer redirect={this.redirect} redirectPhone={this.redirectPhone}/>
+                <WhatsAppLink />
             </div>
         );
     }

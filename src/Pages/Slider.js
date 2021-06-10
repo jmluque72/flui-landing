@@ -73,7 +73,7 @@ class Slider extends React.Component {
                     <Carousel.Item>
                         <div style={{ height:height,width:'100%',backgroundImage:`url(${background})`,backgroundSize:'cover',backgroundPosition:'center'}}>
                             <Grid container direction='row' style={{}}>
-                                <Grid item xs={12} lg={8} style={{ display:'flex',alignItems:'center',alignItems:'center', justifyContent:'center',marginTop: !width ? 80 : 120}}>
+                                <Grid item xs={12} lg={8} style={{ display:'flex',alignItems:'center',alignItems:'center', justifyContent:'center',marginTop: !width ? 50 : 120}}>
                                     <div style={{ display:'flex',flexDirection:'column'}}>
                                         <p className={'textCarousel1'} style={{ fontSize: width &&(120)}}>Sé</p>
                                         <p className={'textCarousel1'} style={{ fontSize: width &&(120)}}>Influ-</p>
